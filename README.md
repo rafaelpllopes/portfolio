@@ -1,3 +1,3 @@
-# Portifólio
+# Portfólio
 
-Criando portifolio no github pages
+Criando portfólio no github pages
