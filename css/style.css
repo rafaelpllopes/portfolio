@@ -13,6 +13,7 @@ body {
   font-family: Arial;
   height: 100vh;
   font-size: 12px;
+  font-family: 'Roboto', sans-serif;
 }
 
 /* se a tela tiver pelo menos 400px vai carregar estes estilos */
@@ -41,6 +42,42 @@ header {
   height: 100vh;
   justify-content: center;
   align-items: center;
+}
+
+.portfolio {
+  color: whitesmoke;
+  margin-bottom: 1.5em;
+  padding: 1em;
+  height: 100vh;
+}
+
+.portfolio .grid {
+  display: grid;
+  gap: 2.5em;
+  justify-content: center;
+}
+
+@media(min-width: 600px) {
+  .grid {
+    grid-template-columns: repeat(2, 240px);
+  }
+}
+
+@media(min-width: 900px) {
+  .grid {
+    grid-template-columns: repeat(3, 240px);
+    align-content: center;
+    height: calc(100vh - 4em - 48px - 1.5em);
+  }
+}
+
+.portfolio figure {
+  text-align: center;
+}
+
+.portfolio h2 {
+  padding: 1.5em;
+  text-align: center;
 }
 
 .menu {
@@ -82,15 +119,18 @@ a:hover {
 }
 
 .site-title {
-  font-size: 3em;
+  font-size: 2.5em;
   text-transform: uppercase;
 }
 
 .site-subtitle {
   font-style: italic;
+  line-height: 1.5em;
 }
 
 .img-portfolio {
+  object-fit: cover;
+  object-position: left bottom;
   height: 180px;
-  width: 180px;
+  width: 240px;
 }
