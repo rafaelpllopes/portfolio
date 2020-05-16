@@ -5,12 +5,19 @@
   box-sizing: border-box;
 }
 
+/*
+  Fontes:
+    @import url('https://fonts.googleapis.com/css2?family=Fira+Code&family=Pacifico&family=Roboto&display=swap');
+    font-family: 'Fira Code', monospace;
+    font-family: 'Pacifico', cursive;
+    font-family: 'Roboto', sans-serif;
+*/
+
 body {
   /* background-image: url(''); */
   /*background-color: #4999ff;*/
   background-color: black;
   background-size: auto 100vh;
-  font-family: Arial;
   height: 100vh;
   font-size: 12px;
   font-family: 'Roboto', sans-serif;
@@ -26,14 +33,12 @@ body {
 @media(min-width: 600px) {
   body {
     font-size: 1.5em;
-    background-color: black;
   }
 }
 
 @media(min-width: 1200px) {
   body {
     font-size: 2em;
-    background-color: black;
   }
 }
 
@@ -44,17 +49,104 @@ header {
   align-items: center;
 }
 
+.site-subtitle,
+.site-title {
+  color: whitesmoke;
+  text-align: center;
+}
+
+.site-title {
+  font-size: 3em;
+  font-family: 'Pacifico', cursive;
+  }
+
+.site-subtitle {
+  /*font-style: italic;*/
+  font-family: 'Fira Code', monospace;
+  line-height: 1.5em;
+}
+
+.titulo {
+  transform: scale(0.2) translate(50vh);
+  opacity: 0;
+  animation: linear 2s animacaoTitulo forwards;
+}
+
+@keyframes animacaoTitulo {
+ 100% {
+  transform: scale(1) translate(0);
+  opacity: 1;
+ }
+}
+
+.menu {
+  background-color: #b6b1b1;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  z-index: 1;
+}
+
+.menu ul {
+  display: flex;
+  justify-content: space-around;
+}
+
+.menu li {
+  list-style: none;
+}
+
+.menu a {
+  color: #000;
+  display: block;
+  padding: 10px 20px;
+  transition: background-color 1.5s, color 1.5s ;
+}
+
+.menu a:active,
+.menu a:hover {
+  background-color: #000;
+  color: #b6b1b1;
+}
+
+a {
+  color: whitesmoke;
+  text-decoration: none;
+}
+
+.contato,
 .portfolio {
   color: whitesmoke;
+  min-height: 100vh;
+}
+
+.contato h2,
+.portfolio h2 {
   margin-bottom: 1.5em;
-  padding: 1em;
-  height: 100vh;
+  font-size: 2em;
+  text-align: center;
+}
+
+.portfolio figure {
+  text-align: center;
 }
 
 .portfolio .grid {
   display: grid;
   gap: 2.5em;
   justify-content: center;
+}
+
+.img-portfolio {
+  object-fit: cover;
+  object-position: left bottom;
+  height: 180px;
+  width: 240px;
+  transition: transform 500ms;
+}
+
+.img-portfolio:hover {
+  transform: scale(1.5);
 }
 
 @media(min-width: 600px) {
@@ -71,66 +163,18 @@ header {
   }
 }
 
-.portfolio figure {
+.icons {
   text-align: center;
 }
 
-.portfolio h2 {
-  padding: 1.5em;
-  text-align: center;
-}
-
-.menu {
-  background-color: #fff;
-  width: 100vw;
-  position: fixed;
-  top: 0;
-}
-
-.menu ul {
-  display: flex;
-  justify-content: space-around;
-}
-
-.menu li {
-  list-style: none;
-}
-
-.menu a {
-  display: block;
-  padding: 10px 20px;  
-}
-
-a {
-  color: teal;
-  text-decoration: none;
-}
-
-a:hover {
-  background-color: aquamarine;
-  border: 2px solid cyan;
-  text-decoration: underline;
-}
-
-.site-subtitle,
-.site-title {
+.icons a{
   color: whitesmoke;
-  text-align: center;
+  font-size: 4em;
+  transition: text-shadow 1.5s;
 }
 
-.site-title {
-  font-size: 2.5em;
-  text-transform: uppercase;
-}
-
-.site-subtitle {
-  font-style: italic;
-  line-height: 1.5em;
-}
-
-.img-portfolio {
-  object-fit: cover;
-  object-position: left bottom;
-  height: 180px;
-  width: 240px;
+icons a:active, 
+.icons a:hover {
+  text-decoration: none;
+  text-shadow: 0px 0px 15px rgba(255, 255, 255, .5);
 }
