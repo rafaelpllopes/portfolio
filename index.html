@@ -13,7 +13,7 @@
 <body>
   <header>
     <nav class="menu">
-      <ul>
+      <ul class="container">
         <li><a href="#sobre">Sobre</a></li>
         <li><a href="#projetos">Projetos</a></li>
         <li><a href="#contato">Contato</a></li>
@@ -26,36 +26,84 @@
     </div>
   </header>
 
-  <section class="sobre" id="sobre">
+  <section class="sobre container" id="sobre">
     <h2>Sobre</h2>
+
+    <figure class="avatar">
+      <img src="https://avatars1.githubusercontent.com/u/8854536?s=400&u=e72cf84c83454f05d4d42cc99b56a30e4b7a3235&v=4"
+        alt="Rafael Pereira de Lacerda Lopes">
+      <figcaption></figcaption>
+    </figure>
+
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur distinctio, placeat ipsa itaque voluptates
+      fugiat deserunt quas nostrum earum pariatur necessitatibus, consequuntur beatae veniam laboriosam quia! Animi
+      optio ab mollitia.
+    </p>
+    <p>
+      Asperiores officia possimus in. Sapiente voluptates porro ipsum alias error perspiciatis nemo deleniti quia ad aut
+      quod pariatur corporis, rem repellendus nesciunt reprehenderit accusamus fugiat totam! Veritatis magni rerum
+      error!
+    </p>
+    <p>Ratione totam accusantium officia magni dicta eligendi enim recusandae saepe. Maiores provident recusandae
+      tempore
+      laudantium labore, accusantium quis expedita perferendis itaque? Officia autem enim unde obcaecati numquam
+      officiis. Saepe, voluptas.
+    </p>
+    <p>Vitae, facilis alias deleniti, quos atque accusantium, amet veritatis libero inventore fuga quae tempora odio
+      nihil sed expedita. Nulla necessitatibus quas aperiam iusto quibusdam explicabo officiis delectus id, reiciendis
+      tempore.
+    </p>
   </section>
 
-  <section class="portfolio" id="projetos">
+  <section class="portfolio container" id="projetos">
     <h2>Projetos</h2>
 
     <div class="grid">
 
-      <figure>
-        <img class="img-portfolio" src="./img/fundo.jpg" alt="Teste">
-        <figcaption>Teste</figcaption>
-      </figure>
-      <figure>
-        <img class="img-portfolio" src="./img/fundo.jpg" alt="Teste">
-        <figcaption>Teste</figcaption>
-      </figure>
-      <figure>
-        <img class="img-portfolio" src="./img/fundo.jpg" alt="Teste">
-        <figcaption>Teste</figcaption>
-      </figure>
-      <figure>
-        <img class="img-portfolio" src="./img/fundo.jpg" alt="Teste">
-        <figcaption>Teste</figcaption>
-      </figure>
+      <div class="flip-card">
+        <div class="card">
+          <figure class="card-front">
+            <img class="img-portfolio" src="./img/fundo.jpg" alt="Teste">
+            <figcaption>Teste</figcaption>
+          </figure>
+
+          <!--<div class="card-back">
+            Teste
+          </div>-->
+        </div>
+      </div>
+
+      <div class="flip-card">
+        <div class="card">
+          <figure class="card-front">
+            <img class="img-portfolio" src="./img/fundo.jpg" alt="Teste">
+            <figcaption>Teste</figcaption>
+          </figure>
+
+          <!--<div class="card-back">
+            Teste
+          </div>-->
+        </div>
+      </div>
+
+      <div class="flip-card">
+        <div class="card">
+          <figure class="card-front">
+            <img class="img-portfolio" src="./img/fundo.jpg" alt="Teste">
+            <figcaption>Teste</figcaption>
+          </figure>
+
+          <!--<div class="card-back">
+            Teste
+          </div>-->
+        </div>
+      </div>
 
     </div>
   </section>
 
-  <section class="contato" id="contato">
+  <section class="contato container" id="contato">
     <h2>Contato</h2>
 
     <div class="grid icons">

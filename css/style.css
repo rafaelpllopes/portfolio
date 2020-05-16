@@ -56,9 +56,9 @@ header {
 }
 
 .site-title {
-  font-size: 3em;
+  font-size: 2em;
   font-family: 'Pacifico', cursive;
-  }
+}
 
 .site-subtitle {
   /*font-style: italic;*/
@@ -73,10 +73,10 @@ header {
 }
 
 @keyframes animacaoTitulo {
- 100% {
-  transform: scale(1) translate(0);
-  opacity: 1;
- }
+  100% {
+    transform: scale(1) translate(0);
+    opacity: 1;
+  }
 }
 
 .menu {
@@ -100,7 +100,7 @@ header {
   color: #000;
   display: block;
   padding: 10px 20px;
-  transition: background-color 1.5s, color 1.5s ;
+  transition: background-color 1.5s, color 1.5s;
 }
 
 .menu a:active,
@@ -114,17 +114,57 @@ a {
   text-decoration: none;
 }
 
+.sobre,
 .contato,
 .portfolio {
   color: whitesmoke;
-  min-height: 100vh;
+  margin-bottom: 2em;
 }
 
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.sobre h2,
 .contato h2,
 .portfolio h2 {
-  margin-bottom: 1.5em;
+  font-family: 'Fira Code', monospace;
   font-size: 2em;
-  text-align: center;
+  text-align: left;
+  margin-bottom: 1em;
+}
+
+.sobre p {
+  text-indent: 2em;
+  margin: 1em;
+  text-align: justify;
+  line-height: 1.5em;
+}
+
+.sobre .avatar {
+  float: left;
+  margin-right: 1em;
+}
+
+.sobre .avatar img {
+  margin-right: 2em;
+  margin-left: 2em;
+  height: 80%;
+  width: 80%;
+  /* border-radius: 10%; */
+  clip-path: polygon(50% 13%, 100% 0, 100% 90%, 50% 100%, 0 90%, 0 0);
+}
+
+@media (min-width: 660px) {
+  .sobre .avatar img {
+    margin-top: 2em;
+    margin-bottom: 2em;
+    clip-path: polygon(90% 0, 100% 50%, 90% 100%, 0 100%, 13% 50%, 0 0);
+  }
 }
 
 .portfolio figure {
@@ -133,7 +173,7 @@ a {
 
 .portfolio .grid {
   display: grid;
-  gap: 2.5em;
+  gap: 1em;
   justify-content: center;
 }
 
@@ -141,13 +181,43 @@ a {
   object-fit: cover;
   object-position: left bottom;
   height: 180px;
-  width: 240px;
+  width: 100%;
   transition: transform 500ms;
 }
 
 .img-portfolio:hover {
-  transform: scale(1.5);
+  transform: scale(1.2);
 }
+/* 
+.flip-card {
+  perspective: 1000px;
+}
+
+.card {
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 2s;
+}
+
+.flip-card:hover .card {
+  transform: rotateY(180deg);
+}
+
+.card-front, 
+.card-back {
+  backface-visibility: hidden;
+  left: 0;
+  position: absolute;
+  top: 0;
+}
+
+.card-back {
+  color: #000;
+  background-color: white;
+  height: 180px;
+  width: 100%;
+  transform: rotateY(180deg);
+} */
 
 @media(min-width: 600px) {
   .grid {
@@ -167,13 +237,13 @@ a {
   text-align: center;
 }
 
-.icons a{
+.icons a {
   color: whitesmoke;
   font-size: 4em;
   transition: text-shadow 1.5s;
 }
 
-icons a:active, 
+icons a:active,
 .icons a:hover {
   text-decoration: none;
   text-shadow: 0px 0px 15px rgba(255, 255, 255, .5);
