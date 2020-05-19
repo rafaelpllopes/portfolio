@@ -80,7 +80,7 @@ header {
 }
 
 .menu {
-  background-color: #b6b1b1;
+  background-color: #fff;
   width: 100vw;
   position: fixed;
   top: 0;
@@ -106,7 +106,7 @@ header {
 .menu a:active,
 .menu a:hover {
   background-color: #000;
-  color: #b6b1b1;
+  color: #fff;
 }
 
 a {
@@ -118,7 +118,6 @@ a {
 .contato,
 .portfolio {
   color: whitesmoke;
-  margin-bottom: 2em;
 }
 
 @media (min-width: 1200px) {
@@ -136,6 +135,26 @@ a {
   font-size: 2em;
   text-align: left;
   margin-bottom: 1em;
+}
+
+.sobre h3,
+.contato h3,
+.portfolio h3 {
+  font-family: 'Fira Code', monospace;
+  font-size: 1.5em;
+  text-align: left;
+  margin-bottom: 1em;
+}
+
+.topicos {
+  list-style: none;
+  margin-left: 4em;
+}
+
+.topicos ul {
+  text-indent: 2em;
+  list-style-position: inside;
+  list-style-type: disc;
 }
 
 .sobre p {
@@ -177,16 +196,19 @@ a {
   justify-content: center;
 }
 
+img {
+  max-width: 100%;
+}
+
 .img-portfolio {
   object-fit: cover;
   object-position: left bottom;
-  height: 180px;
   width: 100%;
   transition: transform 500ms;
 }
 
 .img-portfolio:hover {
-  transform: scale(1.2);
+  transform: scale(1.25);
 }
 /* 
 .flip-card {
