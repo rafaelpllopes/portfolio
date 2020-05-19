@@ -203,13 +203,32 @@ img {
 .img-portfolio {
   object-fit: cover;
   object-position: left bottom;
-  width: 100%;
+  width: 80%;
   transition: transform 500ms;
 }
 
 .img-portfolio:hover {
   transform: scale(1.25);
 }
+
+@media (min-width: 600px) {
+  .img-portfolio:hover {
+    transform: scale(2);
+  }
+}
+
+@media (min-width: 800px) {
+  .img-portfolio:hover {
+    transform: scale(3);
+  }
+}
+
+@media (min-width: 1200px) {
+  .img-portfolio:hover {
+    transform: scale(5);
+  }
+}
+
 /* 
 .flip-card {
   perspective: 1000px;
@@ -251,7 +270,7 @@ img {
   .grid {
     grid-template-columns: repeat(3, 240px);
     align-content: center;
-    height: calc(100vh - 4em - 48px - 1.5em);
+    /* height: calc(100vh - 4em - 48px - 1.5em); */
   }
 }
 
